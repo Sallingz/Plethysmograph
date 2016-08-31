@@ -1,0 +1,227 @@
+
+**** 08/31/16 12:20:22 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test_plethysmograph"  [ c:\users\martinsalling\documents\skole\elektronik\plethysmograph\plethysmograph-pspi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test_plethysmograph.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+.lib "C:\Cadence\Company\OrCAD_PSpice\Models\pspice_demokit.lib" 
+.lib "C:\Cadence\Company\OrCAD_PSpice\Models\sample_models.lib" 
+
+*Analysis directives: 
+.AC DEC 5000 0.1 100
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PLETHYSMOGRAPH
+X_U1A         N00107 N00111 9V+ 9V- N00111 TL072/301/TI
+R_R1         0 N00107  10meg TC=0,0 
+C_C1         N00107 N00210  56n  TC=0,0 
+V_V1         N00210 0  AC 1
++SIN 0 1 0.5 0 0 0
+V_V2         9V+ 0 9Vdc
+V_V3         0 9V- 9Vdc
+X_U1B         N01221 N00970 9V+ 9V- N00970 TL072/301/TI
+X_U2A         N00958 N01029 9V+ 9V- N01029 TL072/301/TI
+R_R2         N00992 N01221  1.8meg TC=0,0 
+R_R3         N00111 N00992  1.8meg TC=0,0 
+R_R4         N00970 N01002  1.8meg TC=0,0 
+R_R5         N01002 N00958  1.8meg TC=0,0 
+C_C2         0 N01221  1.8n  TC=0,0 
+C_C3         N00970 N00992  1.8n  TC=0,0 
+C_C4         N00958 0  1.8n  TC=0,0 
+C_C5         N01002 N01029  1.8n  TC=0,0 
+X_U2B         N02606 N02567 9V+ 9V- N02623 TL072/301/TI
+R_R6         N01029 N02606  10k TC=0,0 
+R_R7         N02606 N02623  220k TC=0,0 
+R_R8         N01029 N02567  10k TC=0,0 
+C_C6         0 N02567  10u  TC=0,0 
+
+**** RESUMING test_plethysmograph.cir ****
+.END
+
+**** 08/31/16 12:20:22 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test_plethysmograph"  [ c:\users\martinsalling\documents\skole\elektronik\plethysmograph\plethysmograph-pspi
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.DX        X_U1B.DX        X_U2A.DX        X_U2B.DX        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+
+
+**** 08/31/16 12:20:22 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test_plethysmograph"  [ c:\users\martinsalling\documents\skole\elektronik\plethysmograph\plethysmograph-pspi
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.JX        X_U1B.JX        X_U2A.JX        X_U2B.JX        
+               PJF             PJF             PJF             PJF             
+         VTO   -1              -1              -1              -1            
+        BETA  270.100000E-06  270.100000E-06  270.100000E-06  270.100000E-06 
+          IS   15.000000E-12   15.000000E-12   15.000000E-12   15.000000E-12 
+
+
+**** 08/31/16 12:20:22 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test_plethysmograph"  [ c:\users\martinsalling\documents\skole\elektronik\plethysmograph\plethysmograph-pspi
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  9V+)    9.0000  (  9V-)   -9.0000  (N00107)-390.5E-06 (N00111)-379.5E-06     
+
+(N00210)    0.0000 (N00958)-649.7E-06 (N00970)-509.1E-06 (N00992)-449.8E-06     
+
+(N01002)-579.4E-06 (N01029)-638.7E-06 (N01221)-520.1E-06 (N02567)-639.1E-06     
+
+(N02606)     .3237 (N02623)    7.4597 (X_U1A.6) 53.74E-09                       
+
+(X_U1A.7)-379.5E-06                   (X_U1A.8)-379.5E-06                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6) 72.09E-09                       
+
+(X_U1B.7)-509.1E-06                   (X_U1B.8)-509.1E-06                       
+
+(X_U1B.9)    0.0000                   (X_U2A.6) 1.473E-06                       
+
+(X_U2A.7)    -.0055                   (X_U2A.8)    -.0055                       
+
+(X_U2A.9)    0.0000                   (X_U2B.6)  -10.1440                       
+
+(X_U2B.7)    7.4789                   (X_U2B.8)    7.4789                       
+
+(X_U2B.9)    0.0000                   (X_U1A.10)    -.3990                      
+
+(X_U1A.11)   -8.6546                  (X_U1A.12)   -8.6545                      
+
+(X_U1A.53)    6.8000                  (X_U1A.54)   -6.8000                      
+
+(X_U1A.90) 78.10E-09                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    -.3991                  (X_U1B.11)   -8.6546                      
+
+(X_U1B.12)   -8.6545                  (X_U1B.53)    6.8000                      
+
+(X_U1B.54)   -6.8000                  (X_U1B.90) 76.48E-09                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  (X_U2A.10)    -.3992                      
+
+(X_U2A.11)   -8.6546                  (X_U2A.12)   -8.6545                      
+
+(X_U2A.53)    6.8000                  (X_U2A.54)   -6.8000                      
+
+(X_U2A.90)    -.0324                  (X_U2A.91)   25.0000                      
+
+(X_U2A.92)  -25.0000                  (X_U2A.99)    0.0000                      
+
+(X_U2B.10)    -.2595                  (X_U2B.11)   -8.4755                      
+
+(X_U2B.12)   -8.8341                  (X_U2B.53)    6.8000                      
+
+(X_U2B.54)   -6.8000                  (X_U2B.90)     .1281                      
+
+(X_U2B.91)   25.0000                  (X_U2B.92)  -25.0000                      
+
+(X_U2B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -3.428E-02
+    V_V3        -3.438E-02
+    X_U1A.VB     5.374E-13
+    X_U1A.VC     6.801E-12
+    X_U1A.VE     6.800E-12
+    X_U1A.VLIM   7.810E-11
+    X_U1A.VLP   -2.500E-11
+    X_U1A.VLN   -2.500E-11
+    X_U1B.VB     7.209E-13
+    X_U1B.VC     6.801E-12
+    X_U1B.VE     6.800E-12
+    X_U1B.VLIM   7.648E-11
+    X_U1B.VLP   -2.500E-11
+    X_U1B.VLN   -2.500E-11
+    X_U2A.VB     1.473E-11
+    X_U2A.VC     6.801E-12
+    X_U2A.VE     6.800E-12
+    X_U2A.VLIM  -3.244E-05
+    X_U2A.VLP   -2.503E-11
+    X_U2A.VLN   -2.497E-11
+    X_U2B.VB    -1.014E-04
+    X_U2B.VC    -9.565E-05
+    X_U2B.VE     1.426E-11
+    X_U2B.VLIM   1.281E-04
+    X_U2B.VLP   -2.487E-11
+    X_U2B.VLN   -2.513E-11
+
+    TOTAL POWER DISSIPATION   6.18E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/31/16 12:20:22 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test_plethysmograph"  [ c:\users\martinsalling\documents\skole\elektronik\plethysmograph\plethysmograph-pspi
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .53
+

@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-test_plethysmograph"  [ c:\users\martinsalling\documents\skole\elektronik\plethysmograph\plethysmograph-pspicefiles\schematic1\test_plethysmograph.sim ] 
+
+** Creating circuit file "test_plethysmograph.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+.lib "C:\Cadence\Company\OrCAD_PSpice\Models\pspice_demokit.lib" 
+.lib "C:\Cadence\Company\OrCAD_PSpice\Models\sample_models.lib" 
+
+*Analysis directives: 
+.AC DEC 5000 0.1 100
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
